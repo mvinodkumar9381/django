@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="ags.customer.customer.views" />
+          <option value="smsproject.adminapp.models.semester_choice" />
+          <option value="smsproject.adminapp.forms.forms" />
+          <option value="smsproject.studentapp.views.adminapp" />
+          <option value="musicplayer.authentication.views.forms" />
+          <option value="musicplayer.musicplayer.views.forms" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

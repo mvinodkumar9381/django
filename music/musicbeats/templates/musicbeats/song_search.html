@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Search Results</title>
+</head>
+<body>
+    <h1>Song Search Results</h1>
+
+    <form method="GET" action="{% url 'song_search' %}">
+        <input type="text" name="query" placeholder="Search for songs" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul>
+        {% for song in songs %}
+            <li>
+                <strong>{{ song.name }}</strong> by {{ song.singer }}<br>
+                Tags: {{ song.tags }}<br>
+                <img src="{{ song.image.url }}" alt="{{ song.name }}" width="100"><br>
+                <audio controls>
+                    <source src="{{ song.song.url }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio><br>
+                Movie: {{ song.movie }}<br>
+                Credit: {{ song.credit }}
+            </li>
+        {% empty %}
+            <li>No songs found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
